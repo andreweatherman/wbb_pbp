@@ -2,7 +2,7 @@
 get_mp <- function(minutes, include_ot=FALSE) {
   seconds <- lubridate::as.duration(minutes*60)
   # pull master sub list
-  master_sub <- readr::read_rds('clt_master_sub.rds')
+  master_sub <- readr::read_rds('https://github.com/andreweatherman/wbb_pbp/raw/main/clt_master_sub.rds')
   # if reg. only
   if(include_ot == FALSE) {
     # filter to inputted time
